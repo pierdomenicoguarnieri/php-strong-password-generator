@@ -8,6 +8,17 @@
     <title>Strong Password Generator</title>
   </head>
   <body>
-
+    <div class="pg-main-wrapper vh-100 w-100 bg-dark py-5 text-center">
+      <h1 class="text-white">Benvenuto in Password Generator!</h1>
+      <div class="container mt-5">
+        <form action="./index.php" method="GET" class="form-control d-flex flex-column bg-transparent shadow">
+          <label for="passLen" class="text-white text-start">Lunghezza della password</label>
+          <div class="pg-input-container d-flex mt-3">
+            <input type="number" class="form-control w-25 me-3 bg-transparent text-white" min="5" max="20" name="passLen" id="passLen" placeholder="5">
+            <button type="button" class="btn btn-success">Genera</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
