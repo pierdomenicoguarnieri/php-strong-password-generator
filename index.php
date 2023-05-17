@@ -1,3 +1,14 @@
+<?php 
+
+$arrayLetter = ["abcdefghijklmnopqrstuvwxyz"];
+$arraySpecialCharacters = ["!?&%$<>^+-*/()[]{}@#_="];
+
+$passLen = intval($_GET["passLen"]) ?? 0;
+
+var_dump($passLen);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +26,7 @@
           <label for="passLen" class="text-white text-start">Lunghezza della password</label>
           <div class="pg-input-container d-flex mt-3">
             <input type="number" class="form-control w-25 me-3 bg-transparent text-white" min="5" max="20" name="passLen" id="passLen" placeholder="5">
-            <button type="button" class="btn btn-success">Genera</button>
+            <button type="submit" class="btn btn-success">Genera</button>
           </div>
         </form>
       </div>
