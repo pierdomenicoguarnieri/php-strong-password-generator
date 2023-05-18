@@ -1,6 +1,11 @@
 <?php 
 
 session_start();
+if(isset($_SESSION['password'])){
+  $password = $_SESSION['password'];
+}else{
+  header('Location: ../../index.php');
+}
 
 ?>
 
