@@ -5,35 +5,8 @@ include __DIR__ . "/assets/partials/functions.php";
 $letters = "abcdefghijklmnopqrstuvwxyz";
 $specialCharacters = "!?&%$<>^+-*/()[]{}@#_=";
 
-$password = "";
-
-if (isset($_GET["passLen"])){
-  $passLen = intval($_GET["passLen"]);
-  while(strlen($password) < $passLen){
-    
-    $randCase = rand(1,4);
-
-    switch ($randCase) {
-      case 1:
-        $password .= $letters[rand(0, strlen($letters) - 1)];
-        break;
-
-      case 2:
-        $password .= strtoupper($letters[rand(0, strlen($letters) - 1)]);
-        break;
-      
-      case 3:
-        $password .= $specialCharacters[rand(0, strlen($specialCharacters) - 1)];
-        break;
-
-      case 4:
-        $password .= rand(0,9);
-        break;
-      
-      default:
-        break;
-    }
-  }
+if(isset($_GET['passLen'])){
+  $password = getPassword($_GET['passLen'], $letters, $specialCharacters);
   var_dump($password);
 }
 
