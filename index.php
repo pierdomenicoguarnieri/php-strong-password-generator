@@ -51,9 +51,9 @@ if (isset($_GET["passLen"])){
       <h1 class="text-white">Benvenuto in Password Generator!</h1>
       <div class="container mt-5">
         <form action="./index.php" method="GET" class="form-control d-flex flex-column bg-transparent shadow">
-          <label for="passLen" class="text-white text-start">Lunghezza della password</label>
+          <label for="passLen" class="text-white text-start">Lunghezza della password (da 5 a 30 caratteri)</label>
           <div class="pg-input-container d-flex mt-3">
-            <input type="number" class="form-control w-25 me-3 bg-transparent text-white" min="5" max="20" name="passLen" id="passLen" placeholder="5">
+            <input type="number" class="form-control w-25 me-3 bg-transparent text-white" min="5" max="30" name="passLen" id="passLen" placeholder="5">
             <button type="submit" class="btn btn-success">Genera</button>
           </div>
         </form>
