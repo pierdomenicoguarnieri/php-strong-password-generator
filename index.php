@@ -1,5 +1,7 @@
 <?php 
 
+include __DIR__ . "/assets/partials/functions.php";
+
 $letters = "abcdefghijklmnopqrstuvwxyz";
 $specialCharacters = "!?&%$<>^+-*/()[]{}@#_=";
 
