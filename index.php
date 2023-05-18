@@ -1,12 +1,16 @@
 <?php 
-session_start();
+
 include __DIR__ . "/assets/partials/functions.php";
 
 $letters = "abcdefghijklmnopqrstuvwxyz";
 $specialCharacters = "!?&%$<>^+-*/()[]{}@#_=";
 
 if(isset($_GET['passLen'])){
-  $password = getPassword($_GET['passLen'], $letters, $specialCharacters);
+  session_start();
+  // Valorizzo all'interno della session una variabile password con il valore $password
+  $_SESSION['password'] = getPassword($_GET['passLen'], $letters, $specialCharacters);
+  // L'header rimanda alla pagina di landing, invece il form mi riporta all'index stesso.
+  header('Location: ./assets/partials/landing.php');
 }
 
 ?>
