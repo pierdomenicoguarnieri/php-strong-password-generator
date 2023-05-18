@@ -7,6 +7,10 @@ if(isset($_SESSION['password'])){
   header('Location: ../../index.php');
 }
 
+if(isset($_POST['newPass'])){
+  header('Location: ./destroySession.php');
+}
+
 ?>
 
 <!DOCTYPE html>
