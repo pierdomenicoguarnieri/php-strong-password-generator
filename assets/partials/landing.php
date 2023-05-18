@@ -22,7 +22,11 @@ if(isset($_SESSION['password'])){
     <div class="pg-main-wrapper vh-100 w-100 bg-dark py-5 text-center text-white">
       <div class="container mt-5">
         <h1>La tua password è:</h1>
-        <span><?php echo $password ?></span>
+        <span><?php echo $password; ?></span>
+
+        <form action="./landing.php" class="form-control bg-transparent border-0 mt-4" method="POST">
+          <button type="submit" class="btn btn-danger" name="newPass">Genera una nuova password</button>
+        </form>
       </div>
     </div>
   </body>
