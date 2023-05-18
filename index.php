@@ -7,7 +7,6 @@ $specialCharacters = "!?&%$<>^+-*/()[]{}@#_=";
 
 if(isset($_GET['passLen'])){
   $password = getPassword($_GET['passLen'], $letters, $specialCharacters);
-  var_dump($password);
 }
 
 ?>
@@ -32,6 +31,13 @@ if(isset($_GET['passLen'])){
             <button type="submit" class="btn btn-success">Genera</button>
           </div>
         </form>
+
+        <?php if(isset($_GET['passLen']) && strlen($password > 0)): ?>
+          <div class="pg-output-container text-white">
+            <h2>La tua password è:</h2>
+            <span><?php echo $password ?></span>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </body>
